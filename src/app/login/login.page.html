@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Accès à son espace privé</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onLogin(f.value)">
+    <ion-item>
+      <ion-label>Identifiant</ion-label>
+      <ion-input type="text" name="login" ngModel placeholder="identifiant.."></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mot de passe</ion-label>
+      <ion-input type="password" name="password" ngModel placeholder="mot de passe.."></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Se connecter</ion-button>
+  </form>
+</ion-content>
+
